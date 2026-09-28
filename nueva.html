@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nueva entrada - Diario de viajes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Diario de viajes</h1>
+    <p>Lugares, historias y consejos de mis viajes</p>
+    <p>por Shirley Ortiz</p>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="nueva.html">Nueva entrada</a>
+      <a href="index.html#sobre-mi">Sobre mí</a>
+    </nav>
+  </header>
+
+  <main>
+    <p><a href="index.html">&larr; Volver al inicio</a></p>
+
+    <section>
+      <h2>Escribir una nueva entrada</h2>
+      <form id="form-entrada">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" required minlength="3" maxlength="80">
+
+        <label for="pais">País:</label>
+        <select id="pais">
+          <option>Chile</option>
+          <option>Ecuador</option>
+          <option>Uruguay</option>
+          <option>Perú</option>
+          <option>Panamá</option>
+        </select>
+
+        <label for="resumen">Resumen (aparece en el inicio):</label>
+        <textarea id="resumen" rows="2" required minlength="10" maxlength="200"></textarea>
+
+        <label for="texto">Texto completo (una línea = un párrafo):</label>
+        <textarea id="texto" rows="6" required minlength="10"></textarea>
+
+        <button type="submit">Publicar</button>
+      </form>
+      <p id="mensaje" role="alert"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Shirley Ortiz - Diario de viajes. Actividad 1 - Desarrollo de Aplicaciones en Red.</p>
+  </footer>
+
+  <script src="datos.js"></script>
+  <script src="nueva.js"></script>
+</body>
+</html>
