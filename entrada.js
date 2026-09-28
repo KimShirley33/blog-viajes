@@ -1,4 +1,4 @@
-// Página de detalle: muestra una entrada completa y sus comentarios
+// Muestra la página de detalle
 
 const detalle = document.querySelector("#detalle");
 const noEncontrada = document.querySelector("#no-encontrada");
