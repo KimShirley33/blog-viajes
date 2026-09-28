@@ -1,11 +1,11 @@
-// Página principal: lista de entradas con resumen y buscador
+// Página principal
 
 const listaEntradas = document.querySelector("#lista-entradas");
 const buscador = document.querySelector("#buscador");
 const filtro = document.querySelector("#filtro");
 const sinResultados = document.querySelector("#sin-resultados");
 
-// ---------- Crear el resumen de una entrada ----------
+// Funcion Crear Resumen
 function crearResumen(entrada) {
   const articulo = document.createElement("article");
   articulo.dataset.pais = entrada.pais;
@@ -36,7 +36,7 @@ function crearResumen(entrada) {
   return articulo;
 }
 
-// ---------- Buscar y filtrar ----------
+// Función Buscar
 function filtrar() {
   const texto = buscador.value.trim().toLowerCase();
   const pais = filtro.value;
@@ -57,7 +57,7 @@ function filtrar() {
 buscador.addEventListener("input", filtrar);
 filtro.addEventListener("change", filtrar);
 
-// ---------- Inicio: mostrar todas las entradas ----------
+//  Inicio
 obtenerEntradas().forEach(function (entrada) {
   listaEntradas.appendChild(crearResumen(entrada));
 });
