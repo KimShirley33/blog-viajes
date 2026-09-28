@@ -1,62 +1,61 @@
 # Diario de viajes — Blog personal
 
-Blog personal de viajes desarrollado con **HTML, CSS y JavaScript puro** (sin
-frameworks ni librerías externas). Todo el funcionamiento ocurre en el lado del
-cliente: no requiere backend ni base de datos. Las entradas nuevas y los
-comentarios se guardan en el navegador mediante `localStorage`.
+Este es el blog de viajes que hice para la Actividad 1 de Desarrollo de Aplicaciones en Red. Está hecho con HTML, CSS y JavaScript, sin frameworks ni librerías externas. Todo funciona en el navegador: no hay backend ni base de datos. Las entradas nuevas y los comentarios se guardan con `localStorage`.
 
-Actividad 1 — Desarrollo de Aplicaciones en Red.
+## Cómo verlo
 
-## Cómo lanzar la aplicación
+No hace falta instalar nada. Hay dos formas:
 
-No requiere instalación ni dependencias. Hay dos formas de abrirlo:
+1. Abrir `index.html` directamente con doble clic. Para probar suele bastar, aunque a veces el navegador se pone raro con algunas rutas.
+2. Levantar un servidor local. Yo usé Python, pero también sirve Node:
 
-1. **Abrir directamente:** hacer doble clic en `index.html`, o abrirlo desde el
-   navegador (`Archivo > Abrir`).
-2. **Servidor local (recomendado):** desde la carpeta del proyecto ejecutar uno
-   de estos comandos y abrir la URL que indique (por ejemplo `http://localhost:8000`):
+```bash
+# Con Python 3
+python3 -m http.server 8000
 
-   ```bash
-   # Con Python 3
-   python3 -m http.server 8000
+# Con Node.js
+npx serve
+```
 
-   # Con Node.js
-   npx serve
-   ```
+Después se abre la URL que indique, por ejemplo `http://localhost:8000`.
 
-El punto de entrada de la aplicación es **`index.html`**.
+Se empieza por `index.html`.
 
-## Funcionalidades
+## Qué se puede hacer
 
-- **Página principal** (`index.html`): listado de entradas con miniatura y
-  resumen, buscador por texto y filtro por país.
-- **Detalle de entrada** (`entrada.html`): muestra la entrada completa y permite
-  agregar comentarios (guardados en `localStorage`).
-- **Nueva entrada** (`nueva.html`): formulario con validación para publicar
-  entradas nuevas, que también se guardan en `localStorage`.
+- En `index.html` está el listado de entradas. Cada una muestra una miniatura y un resumen. También hay un buscador por texto y un filtro por país.
+- En `entrada.html` se ve la entrada completa y se pueden dejar comentarios. Los comentarios quedan guardados en `localStorage`.
+- En `nueva.html` hay un formulario para publicar una entrada. Tiene validación y lo que se crea también se guarda en `localStorage`.
 
-## Estructura del proyecto
+## Archivos del proyecto
 
 ```
 .
-├── index.html      # Página principal (listado + buscador + filtro)
-├── entrada.html    # Detalle de una entrada + comentarios
-├── nueva.html      # Formulario para crear una entrada
-├── datos.js        # Datos iniciales y funciones de localStorage
-├── script.js       # Lógica de la página principal
-├── entrada.js      # Lógica del detalle y los comentarios
-├── nueva.js        # Lógica del formulario de nueva entrada
-├── style.css       # Estilos compartidos por todas las páginas
-└── img/            # Fotos de las entradas
+├── index.html      # listado, buscador y filtro
+├── entrada.html    # detalle de la entrada y comentarios
+├── nueva.html      # formulario para crear entradas
+├── datos.js        # datos iniciales y funciones de localStorage
+├── script.js       # lógica de la página principal
+├── entrada.js      # lógica del detalle y los comentarios
+├── nueva.js        # lógica del formulario
+├── style.css       # estilos compartidos
+└── img/            # fotos de las entradas
 ```
 
 ## Tecnologías
 
-- HTML5
-- CSS3
-- JavaScript (ES6, sin frameworks)
-- `localStorage` para persistencia en el navegador
+HTML5, CSS3 y JavaScript. Nada más. Uso `localStorage` para que los datos no se pierdan al recargar, aunque si se limpia el almacenamiento del navegador se borra todo. Es la limitación de no tener backend.
 
-## Autora
+## Notas
 
-Shirley Ortiz — 2026
+- No hay login ni usuarios. Cualquiera que use el navegador puede añadir entradas o comentarios.
+- El buscador y el filtro funcionan sobre los datos que ya están cargados.
+- Si abres el archivo directamente y algo no carga, prueba con el servidor local.
+
+## Cosas que dejé pendientes
+
+- No se pueden editar ni borrar entradas desde la interfaz.
+- Los comentarios no tienen moderación.
+- Me hubiera gustado añadir más fotos y quizás un mapa, pero para la actividad lo dejé así.
+
+Autora: Shirley Ortiz — 2026
