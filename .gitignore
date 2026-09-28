@@ -1,0 +1,12 @@
+# Archivos de herramientas y editores
+.atl/
+.vscode/
+.idea/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Logs y dependencias (por si en el futuro se agregan)
+node_modules/
+*.log
