@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrada - Diario de viajes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Diario de viajes</h1>
+    <p>Lugares, historias y consejos de mis viajes</p>
+    <p>por Shirley Ortiz</p>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="nueva.html">Nueva entrada</a>
+      <a href="index.html#sobre-mi">Sobre mí</a>
+    </nav>
+  </header>
+
+  <main>
+    <p><a href="index.html">&larr; Volver al inicio</a></p>
+
+    <div id="detalle">
+      <article>
+        <img id="imagen" class="imagen" src="" alt="">
+        <h2 id="titulo-entrada"></h2>
+        <p id="meta" class="meta"></p>
+        <div id="contenido"></div>
+      </article>
+
+      <section class="comentarios">
+        <h3>Comentarios</h3>
+        <ul id="lista-comentarios"></ul>
+        <form id="form-comentario">
+          <label for="c-nombre">Nombre:</label>
+          <input type="text" id="c-nombre" required maxlength="30">
+
+          <label for="c-texto">Comentario:</label>
+          <textarea id="c-texto" rows="3" required maxlength="200"></textarea>
+
+          <button type="submit">Comentar</button>
+        </form>
+      </section>
+    </div>
+
+    <p id="no-encontrada" hidden>Esta entrada no existe. <a href="index.html">Volver al inicio</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Shirley Ortiz - Diario de viajes. Actividad 1 - Desarrollo de Aplicaciones en Red.</p>
+  </footer>
+
+  <script src="datos.js"></script>
+  <script src="entrada.js"></script>
+</body>
+</html>
