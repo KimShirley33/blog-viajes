@@ -1,6 +1,6 @@
-// Datos y funciones que usan las páginas del blog
+// Datos y funciones del blog
 
-// Entradas que trae el blog por defecto. "contenido" es una lista de párrafos.
+// Entradas del blog por defecto
 const entradasIniciales = [
   {
     id: 1,
@@ -84,7 +84,7 @@ const entradasIniciales = [
   }
 ];
 
-// ---------- Guardar y leer del navegador (localStorage) ----------
+// Función leer
 function leer(clave, porDefecto) {
   try {
     const valor = JSON.parse(localStorage.getItem(clave));
@@ -94,22 +94,23 @@ function leer(clave, porDefecto) {
   }
 }
 
+ // Función guardar
 function guardar(clave, valor) {
   try {
     localStorage.setItem(clave, JSON.stringify(valor));
   } catch (error) {
-    // Si el navegador no deja guardar, el blog sigue funcionando
+    // Si no se guarda el blog sigue funcionando
   }
 }
 
-// Devuelve las entradas nuevas (las más recientes primero) y luego las iniciales
-function obtenerEntradas() {
+// Nuevas entradas(las más recientes primero) y luego las iniciales
+function obtenerEntradas() { 
   return leer("entradasNuevas", []).concat(entradasIniciales);
 }
 
 // La foto de cada entrada se llama como el país, en minúsculas y sin tilde:
 // Chile -> img/chile.jpeg, Panamá -> img/panama.jpeg
-// Si la entrada tiene su propio campo "foto" (Perú tiene dos), se usa ese nombre.
+
 function fotoDe(entrada) {
   const nombre = entrada.foto || entrada.pais.toLowerCase().replace("ú", "u").replace("á", "a");
   return "img/" + nombre + ".jpeg";
