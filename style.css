@@ -1,0 +1,120 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background-color: white;
+  color: #222222;
+}
+
+/* Cabecera */
+header {
+  background-color: #0b7a75;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+/* Contenido */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  border-bottom: 2px solid #0b7a75;
+}
+
+/* Formularios */
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  font-size: 16px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px 14px;
+  font-size: 16px;
+  background-color: #0b7a75;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Entradas */
+article {
+  border-bottom: 2px solid #cccccc;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.imagen {
+  width: 100%;
+  display: block;
+}
+
+/* Inicio: foto pequeña a la izquierda y el texto a la derecha */
+.miniatura {
+  float: left;
+  width: 30%;
+  max-width: 220px;
+  height: 150px;
+  object-fit: cover;
+  margin: 0 15px 10px 0;
+}
+
+#lista-entradas article {
+  overflow: hidden;
+}
+
+#lista-entradas h3 {
+  margin-top: 0;
+}
+
+.leer {
+  font-weight: bold;
+}
+
+.meta {
+  font-size: 14px;
+  color: #595959;
+}
+
+.comentarios {
+  margin-top: 15px;
+  border-top: 1px solid #cccccc;
+}
+
+#mensaje {
+  font-weight: bold;
+  color: #0b7a75;
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  padding: 15px;
+  border-top: 1px solid #cccccc;
+}
