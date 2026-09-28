@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog de viajes con historias, lugares y consejos.">
+  <title>Diario de viajes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Diario de viajes</h1>
+    <p>Lugares, historias y consejos de mis viajes</p>
+    <p>por Shirley Ortiz</p>
+    <nav>
+      <a href="#entradas">Entradas</a>
+      <a href="nueva.html">Nueva entrada</a>
+      <a href="#sobre-mi">Sobre mí</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="controles">
+      <label for="buscador">Buscar:</label>
+      <input type="search" id="buscador" placeholder="Escribe una palabra...">
+
+      <label for="filtro">País:</label>
+      <select id="filtro">
+        <option value="todos">Todos</option>
+        <option value="Chile">Chile</option>
+        <option value="Ecuador">Ecuador</option>
+        <option value="Uruguay">Uruguay</option>
+        <option value="Perú">Perú</option>
+        <option value="Panamá">Panamá</option>
+      </select>
+    </section>
+
+    <section id="entradas">
+      <h2>Últimas entradas</h2>
+      <noscript>Este blog necesita JavaScript para mostrar las entradas.</noscript>
+      <div id="lista-entradas"></div>
+      <p id="sin-resultados" role="status" hidden>No hay entradas que coincidan con la búsqueda.</p>
+    </section>
+
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <p>
+        Me llamo Shirley Ortiz y me encanta viajar. Este blog es mi diario: cuento
+        los lugares que visito, lo que aprendo en cada viaje y algunos consejos para
+        quien quiera animarse.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Shirley Ortiz - Diario de viajes. Actividad 1 - Desarrollo de Aplicaciones en Red.</p>
+  </footer>
+
+  <script src="datos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
